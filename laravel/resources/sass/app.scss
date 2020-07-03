@@ -1,0 +1,70 @@
+//
+h2 {
+  font-size: 18px;
+}
+.card-text {
+  & .marker {
+    background:linear-gradient(transparent 75%, #ffdc00 75%);
+    font-weight:bold; 
+  }
+}
+
+.update-profImg {
+  position: relative;
+  width: 100px;
+  padding-top: 100px;
+  overflow: hidden;
+  height: 0;
+}
+.input-file,
+.jsprev-profImg,
+.saved-profImg,
+.db-img {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+}
+.input-file {
+  opacity: 0;
+}
+.jsprev-profImg {
+  z-index: 2;
+  display: none;
+}
+.saved-profImg {
+  z-index: 1;
+}
+.db-img {
+  z-index: 0;
+  height: auto;
+}
+
+.profImg-wrapper {
+  position: relative;
+  width: 100px;
+  height: 0;
+  padding-top: 100px;
+  overflow: hidden;
+  & img {
+    position: absolute;
+    top :50%;
+    width: 100%;
+    transform: translateY( -50% );
+  }
+}
+
+.text-dark {
+  font-family: 'DM Mono', monospace;
+}
+
+.prof-formWrap {
+  max-width: 550px;
+  margin: auto;
+
+  & label {
+    display: block;
+  }
+}
