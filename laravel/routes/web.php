@@ -64,3 +64,12 @@ Route::resource(
   ['only' => ['index', 'store']]
 );
 
+
+//お問い合わせ入力ページ
+Route::get('/contact', 'ContactController@index')->name('contact.index');
+
+//お問い合わせ確認ページ
+Route::post('/contact/confirm', 'ContactController@confirm')->name('contact.confirm');
+
+//お問い合わせ送信完了ページ
+Route::post('/contact/thanks', 'ContactController@send')->name('contact.send');
